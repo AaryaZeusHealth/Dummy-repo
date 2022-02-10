@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "google-chrome index.html",
     "host-data": "npx json-server --watch Data/menu-items.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
