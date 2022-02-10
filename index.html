@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Restaurant</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="container-fluid vh-100">
+        <div class="row h-100">
+            <div class="col-3 border-end border-dark border-4">
+                <div class="container-fluid">
+                    <div class="row">
+                        <h3>
+                            Tables
+                        </h3>
+                    </div>
+                    <div class="row pb-2">
+                        <input type="text" placeholder="Enter Table Number..." class="form-control form-control-sm" onkeyup="searchTables(this.value)">
+                    </div>
+                    <div class="row gy-3" id="table-list">
+                        List of Tables
+                    </div>
+                </div>
+            </div>
+            <div class="col-9">
+                <div class="container-fluid overflow-auto">
+                    <div class="row justify-content-center">
+                        <h3>
+                            Menu
+                        </h3>
+                    </div>
+                    <div class="row pb-2">
+                        <input type="text" placeholder="Enter search query...." class="form-control form-control-sm" onkeyup="searchMenuItems(this.value)">
+                    </div>
+                    <div class="row gy-3" id="menu-list">
+                        List of Menu Items
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for order summary -->
+    <div class="modal fade" id="order-summary" tabindex="-1" aria-labelledby="modal-title-label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+              <h5 class="modal-title" id="modal-title-label">Order Summary</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="order-summary-items-list">
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="order-summary-clear-session-button">Close Session (Generate Bill)</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="App/app.js"></script>
+</body>
+</html>
