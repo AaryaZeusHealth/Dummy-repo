@@ -8,3 +8,12 @@ jobs:
     steps:
       - name: Display stuff
         run: echo "This is whatttt"
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - name: Execute new_stuff.js
+        run: node new_stuff.js
